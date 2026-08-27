@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blocker Status</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <span class="icon">🛡️</span>
+    <span class="title">Stay Strong</span>
+    <span class="badge" id="statusBadge">ON</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value" id="domainCount">—</div>
+      <div class="stat-label">Sites Blocked</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="daysStrong">—</div>
+      <div class="stat-label">Days Strong</div>
+    </div>
+  </div>
+
+  <div class="add-section">
+    <input type="text" id="addInput" placeholder="Add a domain (e.g. site.com)" />
+    <button id="addBtn">Add</button>
+  </div>
+  <div class="add-feedback" id="addFeedback"></div>
+
+  <div class="actions">
+    <button class="btn-settings" id="settingsBtn">⚙️ Manage List</button>
+  </div>
+
+  <div class="footer">
+    Password required to change settings
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

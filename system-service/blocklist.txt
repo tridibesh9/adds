@@ -1,0 +1,105 @@
+# =============================================================================
+# blocklist.txt -- Adult Website Blocklist
+# Used by hosts_blocker.py (Layer 2 of Adult Website Blocker)
+#
+# Format: one domain per line (no http/https prefix, no trailing slash)
+# Lines starting with '#' and blank lines are ignored.
+# Both the bare domain AND www.<domain> are blocked automatically by
+# hosts_blocker.py, so you do not need to list 'www.' variants here.
+# =============================================================================
+
+# --- Major mainstream adult sites ---
+pornhub.com
+xvideos.com
+xnxx.com
+exposurehub.net
+xhaccess.com
+pleazag.com
+faproulette.co
+xhamster.com
+redtube.com
+youporn.com
+tube8.com
+spankbang.com
+beeg.com
+txxx.com
+tnaflix.com
+vporn.com
+4tube.com
+drtuber.com
+hdpornmax.com
+cliphunter.com
+nuvid.com
+ashemaletube.com
+shemale.xxx
+trannytube.xxx
+faphouse.com
+porn555.com
+extremetube.com
+hardsextube.com
+porndig.com
+slutload.com
+keezmovies.com
+sunporno.com
+streamsex.com
+empflix.com
+videopornone.com
+bravotube.net
+megatube.xxx
+tubegalore.com
+gotporn.com
+moviefap.com
+mofosex.com
+sexvid.xxx
+bigtits.xxx
+bangbros.com
+brazzers.com
+realitykings.com
+digitalplayground.com
+wicked.com
+naughtyamerica.com
+meandmymilf.com
+teamskeet.com
+blacked.com
+blackedraw.com
+tushy.com
+vixen.com
+deeper.com
+
+# --- Amateur / community platforms ---
+onlyfans.com
+pornmd.com
+xtube.com
+gaytube.com
+str8upgayporn.com
+cockyboys.com
+nextdoorbuddies.com
+
+# --- Image boards / forums ---
+imagefap.com
+nhentai.net
+hentaihaven.xxx
+e-hentai.org
+exhentai.org
+rule34.xxx
+rule34.paheal.net
+gelbooru.com
+danbooru.donmai.us
+sankakucomplex.com
+
+# --- Escort / hookup ---
+adultfriendfinder.com
+ashleymadison.com
+fling.com
+alt.com
+bdsmlr.com
+fetlife.com
+
+# --- Misc adult networks / redirectors ---
+trafficjunky.com
+adnium.com
+exoclick.com
+juicyads.com
+plugrush.com
+ero-advertising.com
+pornvertising.com

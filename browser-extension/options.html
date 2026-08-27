@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blocker Settings — Stay Strong</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+
+<!-- ── PASSWORD GATE ─────────────────────────────────────────────────── -->
+<div id="passwordGate" class="gate">
+  <div class="gate-card">
+    <div class="gate-icon">🔐</div>
+    <h2 id="gateTitle">Set Your Password</h2>
+    <p id="gateSubtitle">Set a strong password to protect your blocker settings.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <input type="password" id="confirmInput" placeholder="Confirm password" />
+    <div class="gate-feedback" id="gateFeedback"></div>
+    <button id="gateBtn">Set Password &amp; Continue</button>
+  </div>
+</div>
+
+<!-- ── MAIN SETTINGS ─────────────────────────────────────────────────── -->
+<div id="mainSettings" class="hidden">
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="logo">🛡️</span>
+      <span class="app-name">Adult Website Blocker</span>
+    </div>
+    <div class="topbar-right">
+      <span class="days-badge">💪 <span id="daysCount">0</span> days strong</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="enabledToggle" checked />
+        <span class="slider"></span>
+      </label>
+      <span id="enabledLabel">Enabled</span>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" data-tab="domains">🚫 Blocked Sites</button>
+    <button class="tab" data-tab="keywords">🔍 Keyword Blocking</button>
+    <button class="tab" data-tab="log">📋 Block Log</button>
+    <button class="tab" data-tab="security">🔐 Security</button>
+  </div>
+
+  <div class="content">
+
+    <!-- ── TAB: DOMAINS ─────────────────────────────────────────────── -->
+    <div id="tab-domains" class="tab-pane active">
+      <section class="card">
+        <h3>➕ Block a New Site</h3>
+        <div class="add-row">
+          <input type="text" id="addDomainInput" placeholder="e.g. sitename.com or https://www.sitename.com" />
+          <button id="addDomainBtn" class="btn-primary">Block Site</button>
+        </div>
+        <div id="addFeedback" class="feedback"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h3>🚫 Blocked Sites (<span id="totalCount">0</span>)</h3>
+          <input type="text" id="searchInput" placeholder="Search domains..." />
+        </div>
+        <div id="domainList" class="domain-list">
+          <p class="empty-msg">Loading...</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── TAB: KEYWORDS ────────────────────────────────────────────── -->
+    <div id="tab-keywords" class="tab-pane hidden">
+      <section class="card">
+        <h3>🔍 Keyword / Content Blocking</h3>
+        <p class="card-desc">Pages containing these words in their URL, title, or headings will be blocked — even if the domain is not in your list.</p>
+        <div class="toggle-row">
+          <label class="toggle-switch">
+            <input type="checkbox" id="keywordToggle" checked />
+            <span class="slider"></span>
+          </label>
+          <span id="keywordLabel">Keyword blocking ON</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>➕ Add Custom Keyword</h3>
+        <div class="add-row">
+          <input type="text" id="addKeywordInput" placeholder="e.g. explicit" />
+          <button id="addKeywordBtn" class="btn-primary">Add</button>
+        </div>
+        <div id="keywordFeedback" class="feedback"></div>
+        <div id="keywordList" class="domain-list" style="margin-top:1rem">
+          <p class="empty-msg">No custom keywords yet (built-in list is always active).</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>✅ Whitelist (Allow exceptions)</h3>
+        <p class="card-desc">Domains here are NEVER keyword-scanned (e.g. medical sites).</p>
+        <div class="add-row">
+          <input type="text" id="addWhitelistInput" placeholder="e.g. mayoclinic.org" />
+          <button id="addWhitelistBtn" class="btn-secondary">Add to Whitelist</button>
+        </div>
+        <div id="whitelistList" class="domain-list" style="margin-top:1rem">
+          <p class="empty-msg">No whitelisted domains.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── TAB: BLOCK LOG ───────────────────────────────────────────── -->
+    <div id="tab-log" class="tab-pane hidden">
+      <section class="card">
+        <div class="card-header">
+          <h3>📋 Recent Block Events</h3>
+          <button id="clearLogBtn" class="btn-danger-sm">Clear Log</button>
+        </div>
+        <div id="blockLog" class="log-list">
+          <p class="empty-msg">No block events recorded yet.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── TAB: SECURITY ────────────────────────────────────────────── -->
+    <div id="tab-security" class="tab-pane hidden">
+      <section class="card">
+        <h3>🔐 Reset Start Date</h3>
+        <p class="card-desc">Reset your "days strong" counter to today.</p>
+        <button id="resetDateBtn" class="btn-warning">Reset Counter to Day 0</button>
+      </section>
+
+      <section class="card danger-card">
+        <h3>⚠️ Change Password</h3>
+        <div class="danger-row">
+          <div>
+            <strong>Change Blocker Password</strong>
+            <p>Requires your current password.</p>
+          </div>
+          <button id="changePasswordBtn" class="btn-danger">Change</button>
+        </div>
+      </section>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /mainSettings -->
+
+<script src="utils.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
